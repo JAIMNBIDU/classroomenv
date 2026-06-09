@@ -2,7 +2,7 @@
 
 A reproducible Kali Linux training environment for workshops, study groups, university security clubs, bootcamps, and cybersecurity training sessions.
 
-ClassroomEnv was built after repeatedly running into the same problem during beginner training sessions.
+ClassroomEnv was built after repeatedly running into the same problem during initial training sessions.
 
 A significant amount of time was being lost before any actual learning started. Students arrived with different Kali installations, different package versions, missing dependencies, broken repositories, missing guest additions, and inconsistent toolsets. Instead of teaching cybersecurity, time was spent troubleshooting operating systems.
 
@@ -10,7 +10,7 @@ The goal of this project is simple:
 
 Standardize the environment so instructors can focus on teaching and students can focus on learning.
 
-The project was influenced by the standardization philosophy behind PimpMyKali and the work of DeWalt and TCM Security. While using PimpMyKali during PNPT preparation, it became clear how valuable environment consistency is. ClassroomEnv applies a similar idea specifically to training environments and classroom use cases.
+The project was also influenced by the standardization philosophy behind PimpMyKali and the work of DeWalt and TCM Security. While using PimpMyKali during PNPT preparation, it became clear how valuable environment consistency is. ClassroomEnv applies a similar idea specifically to training environments and classroom use cases.
 
 ---
 
