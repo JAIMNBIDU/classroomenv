@@ -40,35 +40,19 @@ Designed specifically for Kali Linux.
 
 ### Core
 
-Essential tools required for most cybersecurity training environments.
-
 ### Web
-
-Web application enumeration, testing, fuzzing, and scanning tools.
 
 ### OSINT
 
-Reconnaissance and open-source intelligence tooling.
-
 ### Active Directory
-
-Enumeration, authentication, and Active Directory assessment tools.
 
 ### Wireless
 
-Wireless auditing and WiFi security tooling.
-
 ### Exploitation
-
-Exploitation frameworks, password auditing, and post-exploitation utilities.
 
 ### Extras
 
-Reverse engineering, debugging, and forensic analysis tooling.
-
 ### Full
-
-Installs all available profiles.
 
 ---
 
