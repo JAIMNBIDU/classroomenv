@@ -9,7 +9,6 @@ A significant amount of time was being lost before any actual learning started. 
 The goal of this project is simple:
 
 Standardize the environment so instructors can focus on teaching and students can focus on learning.
-
 The project was also influenced by the standardization philosophy behind PimpMyKali and the work of DeWalt and TCM Security. While using PimpMyKali during PNPT preparation, it became clear how valuable environment consistency is. ClassroomEnv applies a similar idea specifically to training environments and classroom use cases.
 
 ---
