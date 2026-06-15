@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Runtime artifacts created by classroomenv on the host (never commit these)
+# State and logs live under /var/lib and /var/log on the running machine,
+# but ignore local copies just in case they end up in the repo dir.
+state.json
+*.log
+
+# Editor / OS cruft
+.vscode/
+.idea/
+*.swp
+.DS_Store

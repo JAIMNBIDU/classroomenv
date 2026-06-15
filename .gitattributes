@@ -1,0 +1,18 @@
+# Force Unix (LF) line endings on checkout for everyone, on every OS.
+# This is what prevents the "python3\r: No such file or directory" shebang
+# error when the repo is cloned or edited on Windows.
+
+# Normalize all text files: store as LF in the repo, check out as LF.
+* text=auto eol=lf
+
+# Be explicit for the things that MUST stay LF to be runnable on Linux.
+*.py    text eol=lf
+*.sh    text eol=lf
+*.md    text eol=lf
+classroomenv.py text eol=lf
+
+# Leave binary files untouched (never line-ending-converted).
+*.png   binary
+*.jpg   binary
+*.gz    binary
+*.zip   binary
