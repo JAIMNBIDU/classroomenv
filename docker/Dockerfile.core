@@ -1,1 +1,39 @@
+# docker/Dockerfile.core
+#
+# Base image for ClassroomEnv. Installs the `core` profile on top of
+# kali-rolling. Every other profile image (web, osint, ad, wireless,
+# exploitation, extras, full) builds FROM classroomenv:core, so core's
+# 16 tools are a shared layer instead of being reinstalled per profile.
+#
+# Build:
+#   docker build -f docker/Dockerfile.core -t classroomenv:core .
+#
+# Run:
+#   docker run -it --rm classroomenv:core
 
+FROM kalilinux/kali-rolling
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# kalilinux/kali-rolling is a weekly snapshot. If Kali rotates its archive
+# signing key between when the base image was published and when you build
+# this, `apt-get update` fails with "Missing key ... needed to verify
+# signature" (this has happened before, e.g. the 2025 key rotation).
+# Refresh the keyring first, ignoring failure if the image is already current.
+RUN apt-get update || true && \
+    apt-get install -y --no-install-recommends --allow-unauthenticated kali-archive-keyring || true && \
+    apt-get update
+
+# kali-rolling images ship minimal; classroomenv.py needs python3 to even
+# start, so bootstrap that first before handing off to the script.
+RUN apt-get install -y --no-install-recommends python3 && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt/classroomenv
+COPY classroomenv.py .
+
+RUN python3 classroomenv.py install core --no-gui && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /root
+CMD ["/bin/bash"]
